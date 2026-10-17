@@ -1,8 +1,9 @@
 body
 {
   font-family: arial;
-  background-color: black;
+  background-color: ghostwhite;
 }
+
 body.login
 {
   background: ghostwhite;
@@ -40,6 +41,7 @@ body>main.login
 body>main.login>h1
 {
   font: 225%;
+
 }
 button[type="submit"]#entrar
 {
@@ -50,6 +52,13 @@ button[type="submit"]#entrar
   border: none;
   padding:10px 15px;
   font-size: 21px;
+  transition: all 0.2s;
+  padding: 5 15px;
+}
+button[type="submit"]#entrar:hover
+{
+  cursor: pointer;
+  transform: scale(1.10);
 }
 main.login>form>input
 {
@@ -68,6 +77,127 @@ input:focus
   background-color: aquamarine;
   outline: none;
 }
+
+body.home
+{
+  display: flex;
+  margin: 0 0;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+body.home>header
+{
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  margin: 0 0;
+  position: sticky;
+  top: 0px ;
+}
+body.home>header>nav
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 0 20px;
+  padding: 0 20px;
+  font-size: 125%;
+}
+body.home>main
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  background-color: white;
+}
+body.home>main>h1
+{
+font-size: 200%;
+}
+main.home>#opcaos
+{
+  display: flex;
+  flex-direction: column;
+  gap: 50px 0px;
+}
+main.home>#opcaos>#button
+{
+  display: flex;
+  flex-direction: row;
+  background-color: aquamarine;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 15px ;
+  padding: 15px 15px;
+  font-size: 250%;
+  height: 50px;
+  transition: all 0.2s;
+  box-shadow: 0px 4px 8px aquamarine;
+}
+#button>a
+{
+  color: black;
+  text-decoration: none;
+}
+main.home>#opcaos>#button:hover
+{
+  transform: scale(1.10);
+  cursor: pointer;
+}
+main.home>section
+{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 30px 0;
+  padding: 15px 15px;
+}
+main.home>section>h1
+{
+  margin: 0 0;
+  margin-top: 60px;
+}
+article
+{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  font-size: 140%;
+}
+header>nav>a
+{
+  transition: all 0.2s;
+  color: black;
+  text-decoration: none;
+}
+header>nav>a:hover
+{
+  cursor: pointer;
+  transform: scale(1.10);
+  text-decoration: underline;
+  color: aquamarine;
+  text-shadow: 0px 4px 8px aquamarine;
+}
+ main.login>a
+  {
+    font-size: 150%;
+    color:aquamarine;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  main.login>a:hover
+  {
+    transform: scale(1.10);
+  }
 @media screen and (max-width:986px)
 {
   body.login
@@ -100,6 +230,21 @@ input:focus
   {
     height: 20%;
     font-size: 150%;
+  }
+  body.home>header
+  {
+    height: 7vh;
+    font-size: 200%;
+  }
+  main.login>a
+  {
+    font-size: 150%;
+    color:aquamarine;
+    text-decoration: none;
+  }
+  main.home>section#about>article
+  {
+    font-size: 175%;
   }
   
 }
