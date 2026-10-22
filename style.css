@@ -1,7 +1,7 @@
 body
 {
   font-family: arial;
-  background-color: ghostwhite;
+  background: ghostwhite;
 }
 
 body.login
@@ -22,7 +22,7 @@ form
   height: 50%;
   width: 60%;
 }
-body>main.login
+main.login
 {
   border-radius:20px;
   padding: 15px 30px;
@@ -62,6 +62,11 @@ button[type="submit"]#entrar:hover
 }
 main.login>form>input
 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items:center;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   border-bottom: solid 1px;
@@ -88,7 +93,7 @@ body.home
 }
 body.home>header
 {
-  background-color: whitesmoke;
+  background-color: ghostwhite;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -114,10 +119,10 @@ body.home>main
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 25px;
-  background-color: white;
+  font-size: 18px;
+  background-color: whitesmoke;
 }
-body.home>main>h1
+body.home>main.home>section>article>h1
 {
 font-size: 200%;
 }
@@ -126,6 +131,10 @@ main.home>#opcaos
   display: flex;
   flex-direction: column;
   gap: 50px 0px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 25px 25px;
+  margin-top: 50px;
 }
 main.home>#opcaos>#button
 {
@@ -137,7 +146,7 @@ main.home>#opcaos>#button
   text-align: center;
   border-radius: 15px ;
   padding: 15px 15px;
-  font-size: 250%;
+  font-size: 175%;
   height: 50px;
   transition: all 0.2s;
   box-shadow: 0px 4px 8px aquamarine;
@@ -165,13 +174,15 @@ main.home>section>h1
 {
   margin: 0 0;
   margin-top: 60px;
+  padding: 0 0;
 }
 article
 {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   text-align: left;
-  font-size: 140%;
+  font-size: 110%;
 }
 header>nav>a
 {
@@ -198,6 +209,50 @@ header>nav>a:hover
   {
     transform: scale(1.10);
   }
+p
+{
+  text-align: justify;
+}
+section#about
+{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section#about>article
+{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: center;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.40);
+  border-radius: 20px;
+  padding: 35px 25px;
+  max-width: 800px;
+}
+main.home>section#about>article>h2
+{
+  align-self: flex-start;
+}
+section#about>article:first-child
+{
+  margin-top: 50px
+}
+
+ main.home>div#opcaos>h1
+  {
+    font-size: 200%;
+    text-align: center;
+  }
+ul
+{
+  list-style-image: url("estrelapreta.webp");
+}
+
 @media screen and (max-width:986px)
 {
   body.login
@@ -218,11 +273,6 @@ header>nav>a:hover
   }
   body.login>main.login>form>input
   {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items:center;
     height: 90px;
     font-size: 150%;
   }
@@ -236,17 +286,43 @@ header>nav>a:hover
     height: 7vh;
     font-size: 200%;
   }
+  main.home>div#opcaos>h1
+  {
+    font-size:350%
+  }
   main.login>a
   {
     font-size: 150%;
-    color:aquamarine;
-    text-decoration: none;
   }
   main.home>section#about>article
   {
-    font-size: 175%;
+    font-size: 250%;
+    padding: 15px 25px;
   }
-  
+  section#about
+  {
+    gap: 200px 0px;
+  }
+  section#about>article:first-child
+  {
+    margin-top: 200px
+  }
+  main.home>div#opcaos
+  {
+    padding: 30px 30px
+  }
+  main.home>#opcaos>#button
+  {
+    font-size: 250%;
+  }
+  main.home>section
+{
+  width: 100vw;
+}
+section#about>article
+{
+  max-width: 100%;
+}
 }
 
 
